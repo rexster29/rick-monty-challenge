@@ -24,8 +24,7 @@ function App() {
     setError(null);
 
     try {
-      // const response = await axiosInstance.get(`http://localhost:5178/v1/characters?query=${query}&countPerPage=${countPerPage}`);
-      const response = await axios.get(`https://rickandmortyapi.com/api/character/?name=${query??null}&page=${page}`);
+      const response = await axios.get(`https://rickandmortyapi.com/api/character ?name=${query??null}&page=${page}`);
       console.log("response at fetchCharacterData func", response);
       setData(response.data.results);
       setIsLoading(false);
